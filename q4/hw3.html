@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $("#checkbox").click(function(){
+      if ( $("#checkbox").is(':checked') ) {
+        //alert("this works");
+      //  $("#bname").html() = $("#name_").val();
+        $("#bname").val($("#name_").val());
+        $("#bname").prop('disabled', true);
+        //document.getElementById("bname").disabled=true;
+        $("#baddress").val($("#address").val());
+        $("#baddress").prop('disabled', true);
+
+        //document.getElementById("baddress").disabled=true;
+        $("#bcity").val($("#city").val());
+        $("#bcity").prop('disabled', true);
+
+        //document.getElementById("bcity").disabled=true;
+        $("#bstate").val($("#state").val());
+        $("#bstate").prop('disabled', true);
+
+        //document.getElementById("bstate").disabled=true;
+        $("#bzip").val($("#zip").val());
+        $("#bzip").prop('disabled', true);
+
+        //document.getElementById("bzip").disabled=true;
+   }
+   else {
+        $("#bname").prop('disabled', false);
+        $("#baddress").prop('disabled', false);
+        $("#bcity").prop('disabled', false);
+        $("#bstate").prop('disabled', false);
+        $("#bzip").prop('disabled', false);
+   }
+    });
+  });
+  </script>
+</head>
+
+<body>
+  <h3>Billing address</h3>
+
+  <form>
+    name:<br>
+    <input id="name_" type="text" name="name">
+    <br>
+    address:<br>
+    <input id="address" type="text" name="address">
+    <br>
+    city:<br>
+    <input id="city" type="text" name="city">
+    <br>
+    state:<br>
+    <input id="state" type="text" name="state">
+    <br>
+    zip:<br>
+    <input id="zip" type="text" name="zip">
+    <br>
+    <input id="checkbox" type="checkbox" name="checkbox">Shipping address
+    is the same as billing
+    <br>
+    <h3>Shipping address</h3>
+    name:<br>
+    <input id="bname" type="text" name="name">
+    <br>
+    address:<br>
+    <input id="baddress" type="text" name="address">
+    <br>
+    city:<br>
+    <input id="bcity" type="text" name="city">
+    <br>
+    state:<br>
+    <input id="bstate" type="text" name="state">
+    <br>
+    zip:<br>
+    <input id="bzip" type="text" name="zip">
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</body>
+
+</html>

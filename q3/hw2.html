@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Homework 6</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      $("button").click(function(){
+        validateName();
+        validateAge();
+        validateGender();
+      });
+    });
+    function validateName(){
+      if(($("#name").val()).length > 24 || $("#name").val()=="" || $("#name").val()==null){
+          $("#nameError").text("Please enter a valid Name");
+        }
+      else {
+          $("#nameError").text(" ");
+        }
+    }
+    function isNumber(n) { return !isNaN(parseFloat(n)) && !isNaN(n - 0) }
+
+    function validateAge(){
+      if(isNumber($("#age").val()) === false || $("#age").val()=="" || $("#age").val()==null){
+        $("#ageError").text("Input not valid");
+        }
+      else{
+        $("#ageError").text(" ");
+        }
+    }
+
+function validateGender() {
+  if($("#female").prop('checked') == false && $("#male").prop('checked') == false){
+    //document.getElementById("errorGender").innerHTML = " Please Select Your Gender";
+    $("#genderError").text(" Please Select Your Gender");
+  }
+  else{
+    $("#genderError").text(" ");
+  }
+}
+
+    </script>
+  </head>
+  <body>
+    <h2>HTML Forms</h2>
+
+    <form>
+      Name:
+      <input id="name" type="text" name="name">
+      <p id='nameError' style="color:red; font-weight:bold; display:inline"></p>
+      <br>
+      Age:
+      <input id="age" type="text" name="age">
+      <p id='ageError' style="color:red; font-weight:bold; display:inline"></p>
+      <br>
+    
+      <div>
+      	<label>Gender: </label>
+		<label>Male </label>
+		<input type="radio" name="gender" value="male" id="male">
+		<label>Female </label>
+		<input type="radio" name="gender" value="female" id="female"> <p id='genderError' style="color:red; font-weight:bold; display:inline"></p>
+	</div>
+      <br><br>
+      <button type="button">Submit</button>
+    </form>
+  </body>
+</html>
+
+        

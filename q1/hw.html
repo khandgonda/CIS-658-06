@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Homework 6</title>
+	<style>
+		p{display: inline; color: red;}
+	</style>
+</head>
+<body>
+<form>
+	<div>
+	<label>Name</label>
+	<input type="text" placeholder="Enter your Name" id="name_">	<!-- <p>Please Enter your First name</p> --> <p id="demo"></p>
+	</div>
+    
+    <div>
+	<label>Age</label>
+	<input type="text" placeholder="Enter your age" id="numb"><!-- <p>Please your age in the correct format</p> --><p id="demo1"></p>
+	</div>
+
+        <div>
+        <label>Gender: </label>
+		<label>Male </label>
+		<input type="radio" name="gender" value="male" id="male">
+		<label>Female</label>
+		<input type="radio" name="gender" value="female" id="female"><!-- <p>Please Select a gender</p> --><p id="demo2"></p>
+	</div>
+
+	<div>
+	<button type="button" onclick="validation();textValidation();genderVal()">Submit</button>
+	</div>
+</form>
+<script src="hw.js"></script>
+<script type="text/javascript"></script>
+
+</body>
+</html>
